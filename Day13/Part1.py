@@ -1,0 +1,2 @@
+from Input import inp
+print(sum(i for i,(x, y) in enumerate(zip(*[iter(eval(x) for x in inp.split())]*2),1) if (lambda f,x,y,finished:f(f,x,y, finished))(lambda f,x,y,finished: any(res) if (res:=[a < b if type(a) is type(b) is int and finished.append(1) == None else f(f, [a] if type(a) is int else a, [b] if type(b) is int else b, finished) for a,b in zip(x,y) if not finished and a != b]) and finished else len(x)!=len(y) and finished.append(1) == None and len(x) < len(y),x,y,[])))
